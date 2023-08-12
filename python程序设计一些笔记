@@ -1,0 +1,942 @@
+m,n=input('请输入两个值：').split()
+print(m,end='')
+print(n,end='')
+
+###################################################
+import math     #引入数学库
+a=int(input())
+b=int(input())
+c=int(input())
+s=(a+b+c)/2     #*表示乘  math.sqrt表示开根号
+area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print("三角形的边长分别为：",a,b,c,end='')
+print('三角形的面积S=',area,end='')
+
+
+
+import math
+a,b,c=map(int,input().split())
+s=(a+b+c)/2     #*表示乘  math.sqrt表示开根号
+area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print("三角形的边长分别为：",a,b,c,end='')
+print('三角形的面积S=',area,end='')
+
+
+import math     #引入数学库
+a=int(input("a="))
+b=int(input("b="))
+c=int(input("c="))
+s=(a+b+c)/2     #*表示乘  math.sqrt表示开根号
+area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print("三角形的边长分别为：",a,b,c,end='')
+print('三角形的面积S=',area,end='')
+
+注：格式：3
+          4
+          5
+
+
+
+
+0b或0B表示二进制     
+0o或0O表示八进制
+0x或0X十六进制
+>>> bin(3)
+'0b11'
+>>> oct(56)
+'0o70'
+>>> hex(788)
+'0x314'
+9%5表示余数    100//5表示整除  100/10浮点数除
+1.2e-5表示科学计数法
+
+
+2.1-2.0==0.1
+False
+浮点数有误差
+round(0.73674,3)
+0.737
+>>> abs(-116235)
+116235
+>>> import math
+>>> math.pi
+3.141592653589793
+>>> math.sqrt（9）三角函数也要加math
+
+math.cos(60*math.pi/180)弧度制
+
+
+
+	\n代表换行
+“  ”字符串
+print('人生苦短\n我用python')
+人生苦短
+我用python
+
+'2'*3
+'222'
+
+	2不等于3
+2!=3
+True
+'a'<"A"
+False
+字符串比较第一个Unicode码
+
+
+2**3**2
+512
+注：从右往左为2的9次方
+
+4<=7 or 8>79    注意or与数字之间有一个空格
+True
+
+and  or  not逻辑字符
+
+
+ord('宋')
+23435
+chr(97)
+'a'
+
+
+>>> list('dytfxfg')   #小括号
+['d', 'y', 't', 'f', 'x', 'f', 'g']
+
+
+取数组前3个值
+
+1
+2
+3
+b =a[:3]
+>>> print b
+[1 2 3]
+取前３个以后的值
+
+1
+2
+3
+b =a[3:]
+>>> print b
+[4 5 6 7 8 9]
+取数组的后３个值
+
+1
+2
+3
+b =a[-3:]
+>>> print b
+[7 8 9]
+取数组后３个以前的值
+A[:-3]
+[::3] 其中：的意思就是取索引值，所以意思就是从开始到结束，每三个取一个值。
+
+A[::-2]表示倒过来每隔一个取一个值
+
+
+>>> i=9
+>>> i*=5+6
+>>> i
+99
+>>> j=9
+>>> j*=7
+>>> j
+63
+
+
+
+If语句
+
+a=int(input('请输入一个数：'))
+if a%2==1:
+    print('奇数')
+else:
+print('偶数')
+    
+
+a=float(input('用水量'))
+if a<=17:
+   b=4*a
+else:
+    b=6**a
+print('水费={:.2f}'.format(b))         注：红色部位表示保留两位小数，改为3为保留    3位小数
+
+
+
+for语句
+
+
+for i in [6,9,8,0,8]:         冒号不能丢
+	print(i)
+
+	
+6
+9
+8
+0
+8
+
+
+
+
+
+
+
+list(range(7,77,7))
+[7, 14, 21, 28, 35, 42, 49, 56, 63, 70]       range（start，stop，step）
+
+
+list(range(7,-77,-7))
+[7, 0, -7, -14, -21, -28, -35, -42, -49, -56, -63, -70]     步长可以为负数
+
+
+>>> for i in range(2,27,3):
+	print(i,end="")
+
+	
+258111417202326       注：for i in range(2,27,3):与for i in list（range(2,27,3)）:等价
+
+
+
+>>> sum(range(1,78))   从一加到77
+3003
+
+
+n=int(input('n='))
+a=sum(range(1,n+1))
+print("总和="+str(a))   #字符串与数字不能相加  
+
+
+a,b,c=input().split()
+a=int(a)
+b=int(b)
+c=int(c)
+x=b*b-4*a*c
+print(x)
+  
+
+
+
+阶乘n=int(input('n='))
+a=1
+for i in range(1,n+1):
+    a=a*i
+print(a)
+
+
+n = int(input())
+jie = 1
+sum = 0
+i = 1
+while n >= i:
+  jie = jie * i
+  sum = sum + jie
+  i = i + 1
+print(sum)
+
+
+jie只是普通的字符
+
+
+
+
+>>> A=[i+7 for i in [1,2,3,4,5,6,7]]
+>>> A
+[8, 9, 10, 11, 12, 13, 14]
+
+
+>>> A=[i+7 for i in [1,2,3,4,5,6,7] if i%2==1]
+>>> A
+[8, 10, 12, 14]
+>>>
+
+
+A=[2+abc for abc in [1,2,3,4,5,6,7]]
+print(A)
+
+
+
+
+
+
+
+ n = int(input())阶乘
+a = 1
+sum = 0
+i = 1
+while n >= i:
+  a = a * i
+  sum = sum + a
+  i = i + 1
+print(sum)
+
+
+
+
+n=int(input('请输入n='))
+A=sum([(-1)**(i+1)/(2*i-1) for i in range(1,n+1)])
+print(A)
+
+n=int(input('请输入n='))
+B=sum([(-1)**(i+1)/i for i in range(1,n+1)])
+print(B)
+
+n=int(input('请输入n='))
+A=sum([1/i if i%2==1 else -1/i for i in range(1,n+1)])
+print(A)
+
+
+
+A=int(input('请输入n='))
+B=sum([1/i if i%4==1 else -1/i for i in range(1,A+1) if i%2==1])
+print(B)
+      
+A=int('6'*6)
+print(A)
+
+n=int(input('请输入n='))
+A=sum([int('6'*i) for i in range(1,n+1)])
+print(A)
+
+>>> int("111",2)    #右边参数为数的进制,转换为十进制
+7
+import random
+a=random.randint(0,100)
+i=0
+while True:
+    b=int(input('输入你猜的数'))
+    if b==a:
+        print("你猜对了")
+        break
+        print("猜了{}次".format(i+1))
+    elif b>a:
+        i+=1
+        print("猜大了")
+    else:
+        i+=1
+        print("猜小了")
+print("猜了{}次".format(i+1))
+
+>>> divmod(9,2)
+(4, 1)
+计算商和余数
+
+复数：
+a=complex(2,3)
+print(a)
+print(a.real)
+print(a.imag)
+
+import math
+a=-5.76
+print(math.ceil(a))#返回不小于x的最小整数
+print(math.floor(a))#返回不大于x的最大整数
+print(math.trunc(a))#返回整数部分
+print(math.fabs(a))#返回绝对值
+
+优先级：
+幂，正负，乘除，整除，取模，加减，比较运算（x<y），not，and,or
+
+a=00000101
+b=00010001
+print(a&b,a|b,a^b,~a,a<<2,a>>2)
+#and,or,异或，not,左移两位，右移两位    ~a=-a-1
+
+a=10
+print('{:>08s}'.format(bin(a)[2:]))
+
+
+s='我学python'
+print('{0}'.format(s))
+print('{0:>30}'.format(s))#右对齐
+print('{0:！^20}'.format(s))#居中
+
+s='this is a test.'
+print(s.count('is'))#is 出现几次
+
+a=[2,9,0,8,7,7]
+del a[2]
+
+
+a=[9,5,4,3,2,1]
+a[1:1]=[8,7,6]
+print(a)
+结果：[9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+
+a.	append(x)加在末尾
+a．	extend([4,7,8])在末尾加个列表
+a.	insert(2,4)在二的位置加一个四，如果超过则加入最后
+a.	remove(x)   x为要删除的值，如果这个值不存在则会产生错误
+a.	pop(x)用法与remove一样但会弹出删除的那个值
+如a=[9,5,4,3,2,1]，如果a.pop()默认删除最后一个值
+print(a.pop(3))
+a.	reverse()将列表逆过来
+a.	index(3)查找函数，结果是3所在的位置
+a,find(3)
+a.	sort()
+a=[9,5,4,11,2,1]
+a.sort()
+print(a)
+a.reverse()
+print(a)
+结果：[1, 2, 4, 5, 9, 11]
+[11, 9, 5, 4, 2, 1]
+
+
+a='bl/bl/fjy/yt'
+print(a.split('/'))
+  
+a=['h','k','k','k']
+a='0'.join(a)
+print(a)
+h0k0k0k
+
+continue 跳过一轮循环
+
+
+s=0;c=0
+while True:
+    x=int(input())
+    if x==-1:
+        break
+    elif x%2==1:
+        continue
+    else:
+        s+=x
+        c+=1
+print(s/c)
+
+
+
+是否是素数：
+a=int(input())
+x=a-1
+while x>1:
+    if a%x==0:
+        print('shi')
+        break
+    x-=1
+else:
+print('no')
+
+
+
+
+
+
+m,n=map(int,input('请输入两个正整数').split())
+if m>n:
+    m,n=n,m
+s=0
+for i in range(m,n+1):
+    for j in range(2,i):
+        if i%j==0:
+            break    ###break跳过了下面的else语句，如果改成s=s则每一个i都会加
+    else:
+         s=s+i
+
+print(s)
+
+
+输入一个矩阵：
+a=[]
+n=int(input('请输入有几行'))
+for i in range(0,n):
+    a.append(input('请输入每一行中的元素').split())
+print(a)
+
+元组：
+a=[1]*3
+a=tuple(a)
+print(a)
+    
+
+
+
+随机数：
+import random
+lst=[2,4,3,1,5,7,0]
+print(random.random())
+print(random.uniform(1,10))
+print(random.randint(1,10))
+print(random.randrange(1,10))
+print(random.choice(lst))
+print(random.sample(lst,3))
+print(random.shuffle(lst))
+    
+不一样的：
+a=[[i+j for i in range(1,4)] for j in range(1,4)]
+print(a)
+b=[[i+j] for i in range(1,4) for j in range(1,4)]
+print(b)
+结果：[[2, 3, 4], [3, 4, 5], [4, 5, 6]]
+[[2], [3], [4], [3], [4], [5], [4], [5], [6]]
+
+
+
+
+lower,upper=map(int,input().split())
+if -20<=lower<=upper<=50:
+        print('celsius    fahr')
+        for i in range(lower,upper+1,2):
+          print(i,end='')
+          print('{0:>14}'.format('{:.1f}'.format(i*1.8+32)))
+else:
+    print('Invalid')
+
+
+
+data=set()#创造一个集合
+while True:
+    x=int(input())
+    if x==-1:
+        break
+    else:
+        data.add(x)
+print(data)
+
+s1={2,3,5,7}
+s2={1,2,3,4,5,6,7}
+print(s1.issubset(s2))
+print(s2.issuperset(s1))
+_差
+|并集
+&交集
+^异或，并集再去掉一样的元素
+
+
+a=dict(c=1,d=2,e=3)#创建字典
+print(a)
+
+b=dict((('x',2),('y',3)))#3把嵌套元组变成字典
+print(b)
+print({**a,**b})#合并两个字典，若有相同的关键字，则取后一个字典的数据
+
+def fin(n):
+    a=[1,1]
+    for i in range(0,n-2):
+        c=a[-1]+a[-2]
+        a.append(c)
+    return(a)
+print(fin(7))
+
+
+a=10
+print('{:0>8s}'.format(bin(a)[2:]))#print('{:>08s}'.format(bin(a)[2:]))一样
+print(bin(a)[2:])
+
+print('{0:b}'.format(a))#换成o,x,X代表八进制，小写16进制，大写16进制
+print('{0:*>10d}'.format(a))
+print('{0:*^10d}'.format(a))#居中对齐
+print('{0:%}'.format(a))
+
+a=input()
+a=[int(n) for n in a.split()]
+a.sort
+print(a)
+
+
+
+字符串也可是s[::-1]使其倒叙
+
+a={'1':'我','2':'你','3':'他'}
+b={'4':'me','5':'you','6':'it'}
+print(a['3'])
+a['4']='她'#加入新的条目
+print(a)
+c=dict(k='2',h='gui',m='ren')#=前是标识符，不能加引号。{'k': '2', 'h': 'gui', 'm': 'ren'}
+print(c)
+d=dict((('s','me'),('x','you'),('h','j')))#嵌套元组
+d=dict([('s','me'),('x','you'),('h','j')])#嵌套元组,列表中套元组也可以
+
+print(d)
+del d['s']#或者d.pop('s')来删除这个键所对应的值
+print(d)
+for i in a:
+    print(i+':'+a[i],end=' ')
+print()#结束end=''   
+#print({**a,**b})#大括号不可丢,等效于下面两行代码
+a.update(b)
+print(a)
+print(list((b.keys())))
+print(list(b.values()))
+print(list(b.items()))#[('4', 'me'), ('5', 'you'), ('6', 'it')],返回以元组为元素的序列
+b.clear()
+print(b)
+
+
+
+a={'1':'我','2':'你','3':'他'}
+b={'4':'me','5':'you','6':'it'}
+print(a.get('3'))
+print(a['3'])
+for m,n in a.items():
+    print(n+'的成绩是'+m)
+#结果是：
+#我的成绩是1
+#你的成绩是2
+#他的成绩是3
+print({m:n for n,m in a.items()})#注意n，m是逗号，此处意思是互换键与值
+
+
+
+s=input()
+a=dict()
+for i in s:
+    a[i]=a.get(i,0)+1#当i在a中时，返回i对应的value值，如果不在返回0
+print(a)
+
+def f(x):
+    return x**2+1
+n=int(input())
+y=f(n)
+print(y)
+
+
+
+
+def f(x):
+    a=x**2+1
+    return a
+n=int(input())
+y=f(n)
+print(y)
+
+def为定义函数
+
+
+
+
+阶乘：
+def f(x):
+    if x==1:
+        return 1
+    else:
+        return x*f(x-1)
+a=int(input())
+print(f(a))
+
+
+
+a=int(input('请输入一个数'))
+j=1
+for i in range(1,a+1):
+    j*=i
+print(j)
+
+
+求阶乘
+def f(x):
+    if x==1:
+        return 1
+    else:
+        return x*f(x-1)
+a=int(input())
+print(f(a))
+
+
+
+a=int(input('请输入一个数'))
+j=1
+for i in range(1,a+1):
+    j*=i
+print(j)
+
+a=int(input())
+j=1
+c=1
+s=0
+while j<a:
+    c=c*(j+1)
+    j=j+1
+    s=s+c
+print(c,s)
+
+
+
+def fib(x):
+    if x==0 or x==1:
+        return 1
+    else:
+        return fib(x-1)+fib(x-2)
+
+a=fib(7)
+print(a)
+
+
+
+a=[234,45,456,5,6565,235,657,76,8,764]
+for i in range(len(a)-1):
+    b=i
+    for j in range(i+1,len(a)):
+        if a[i]>a[j]:
+            b=j
+            a[i],a[b]=a[b],a[i]
+print(a)
+
+
+
+a=[234,45,456,5,6565,235,657,7,8,764]
+for i in range(len(a)-1):
+    for j in range(i+1,len(a)):
+        if a[i]<a[j]:
+            a[i],a[j]=a[j],a[i]
+print(a)
+
+a=[234,45,456,5,6565,235,657,7,8,764]
+for i in range(len(a)-1):
+    for j in range(len(a)-i-1):
+        if a[j]>a[j+1]:
+           a[j],a[j+1]=a[j+1],a[j]
+print(a)
+
+两种排序方法的函数定义
+def maopao(x):
+    for i in range(len(x)-1):
+        for j in range(len(x)-i-1):
+            if x[j]>x[j+1]:
+                x[j],x[j+1]=x[j+1],x[j]
+    return(x)
+x=[324,345,56,365,765,7,6765,474,7,77777]
+s=maopao(x)
+print(s)
+
+
+def xuanze(x):
+    for i in range(len(x)-1):
+        for j in range(i+1,len(x)):
+            if x[i]>x[j]:
+                x[i],x[j]=x[j],x[i]
+    return(x)
+x=[324,345,56,365,765,7,6765,474,7,77777]
+s=xuanze(x)
+print(s)
+
+
+
+
+a=[1,2,3,4,5,6,7]
+x=int(input('请输入要查找的数='))
+F=-1
+l=0
+r=len(a)-1
+while l<=r:
+    m=(l+r)//2
+    if x>a[m]:
+        l=m+1
+    elif x<a[m]:
+        r=m-1
+    else:
+        F=m
+        break
+print(F)查找
+
+
+
+贪心法找零
+coins=[100,50,20,20,5,1]
+zhaoling=[]
+money=int(input('找零面额'))
+for i in range(len(coins)):
+    zhaoling=zhaoling+[money//coins[i]]
+    money=money%coins[i]
+print(sum(zhaoling))
+
+
+排序
+L=[13,45,5343,54,47,65,54,564,56,566,7]
+L.sort()
+print(L)
+
+
+n=int(input('请输入年份'))
+if n%4==0 and n%100!=0 or n%400==0:
+      print(str(n)+'是闰年')
+else:
+      print(str(n)+'不是闰年')
+好
+
+
+
+
+s='AddDEFVZdg15#@D!4'
+a=list(s)
+for i in range(len(a)):
+      if "A"<=a[i]<='Z':
+            a[i]=chr(ord(a[i])+32)
+      print(a[i],end='')
+
+
+
+
+
+
+s="Ab12Cd&^5$"
+#lst=list(s)
+print(s)
+
+#for x in lst:
+for x in s:
+    if "A"<=x<='Z':
+        x=chr(ord(x)+ord("a")-ord("A"))#x=chr(ord(x)+32)
+    elif "a"<=x<='z':
+        x=chr(ord(x)-ord("a")+ord("A"))
+print(x,end="")
+a,b,c=map(float,input().split())
+if a==0 and b==0 and c==0:
+      print('无数解')
+if a==0 and b==0 and c!=0:
+      print('无解')
+if a==0 and b!=0:
+      x=-c/b
+delt=b*b-4*a*c
+import math
+if a!=0 and delt>0:
+      x1=(-b+math.sqrt(delt))/(2*a)
+      x2=(-b-math.sqrt(delt))/(2*a)
+      print('x1='+str(x1),'x2='+str(x2))
+if a!=0 and delt==0:
+      x1=(-b)/(2*a)
+      print('x1=x2='+str(x1))
+if a!=0 and delt<0:
+      print('无解')
+
+
+
+
+s='fs7FG8874%5$5K86i'
+n1=0
+n2=0
+n3=0
+for i in s:
+      if 'A'<=i<='Z' or 'a'<=i<='z':
+            n1=n1+1
+      elif '1'<=i<='9':
+            n2=n2+1
+      else:
+            n3=n3+1
+print(n1,n2,n3)
+print('人生苦短\n我用Pyhon')      #只有字符串才可\n换行
+
+
+
+n=int(input())
+a,b=2,1
+s=0;i=1
+while i<=n:
+    s=s+a/b
+    a,b=a+b,a
+    i=i+1
+print(s)
+
+n=int(input('h='))
+a=2
+s=0
+for i in range(0,n):
+    s=s+a
+    a=1+1/a
+print(s)
+
+
+
+
+n=int(input())
+for i in range(1,n+1):
+    c=chr(ord('A')+i-1)
+    a=str(c)*(2*i-1)
+    print((' ')*(2*n-i),end='')
+    print(a)
+
+    
+n=int(input())
+for i in range(1,n+1):
+    #print(" "*(50-i-n),end="")
+    for j in range(1,20-i-1-n):
+        print(" ",end="")
+    for j in range(1,2*i):
+        print(chr(ord("A")+i-1),end="")
+    print()
+    #print((2*i-1)*chr(ord("A")+i-1))
+
+
+
+turtle：
+
+
+import turtle
+p=turtle.Turtle()
+#turtle.bgcolor('cyan')设置背景颜色
+for i in range(5):
+    p.forward(200)
+    p.left(180-180/5)
+turtle.done
+
+
+
+import turtle
+p=turtle.Turtle()
+p.speed(0)#0到10之间，在其他范围默认0，0最快
+turtle.colormode(255)#使用RGB……p.pencolor(0,255,0)
+def f(x):
+    if x>100:
+        return
+    p.pencolor('green')
+    p.forward(x)
+    p.left(90)
+    p.forward(0.618*x)
+    p.left(90)
+    p.forward(x)
+    p.left(90)
+    p.forward(0.618*x)
+    p.left(7)
+    x+=1
+    f(x)
+
+f(77)
+p.pencolor('black')
+p.forward(200)
+p.left(17)
+p.circle(40,180)
+turtle.done()
+
+
+p.pensize(20)#数字越大画笔越粗
+p.pencolor(random.randint(0,255), random.randint(0,255), random.randint(0,255))
+turtle.setup(650,350,200,200)
+turtle.penup()
+turtle.fd(-250)
+turtle.pendown()
+
+
+import turtle
+p=turtle.Turtle()
+p.pencolor('red')
+p.speed(0)
+p.left(70)
+p.penup()
+p.circle(70)
+p.forward(5)
+p.pendown()
+p.circle(-50,180)
+for i in range(120):
+    p.right(0.1)
+    p.forward(1)
+p.right(90)
+for i in range(120):
+    p.right(0.1)
+    p.forward(1)
+p.circle(-50,175)
+
+
+turtle.setheading(0)#设置角度
+
+turtle.fillcolor('green')
+turtle.begin_fill()
+turtle.end_fill()
+
+turtle.dot(50,'red')数字为大小，右边为颜色
+
+
+
